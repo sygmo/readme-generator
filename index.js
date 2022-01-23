@@ -37,6 +37,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'license',
+        message: "Enter one of the following licenses - Apache, GNU General Public License (GPL), MIT, Mozilla: "
+    },
+    {
+        type: 'input',
         name: 'email',
         message: "Enter your email: "
     }
