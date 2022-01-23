@@ -36,9 +36,10 @@ const questions = [
         message: "Enter test instructions: "
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
-        message: "Enter one of the following licenses - Apache, GNU General Public License (GPL), MIT, Mozilla: "
+        message: "Select one of the following licenses:",
+        choices: ["Apache", "GNU General Public License (GPL)", "MIT", "Mozilla"]
     },
     {
         type: 'input',
@@ -77,7 +78,5 @@ init();
 // THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 // WHEN I enter my GitHub username
 // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-// WHEN I enter my email address
-// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 // WHEN I click on the links in the Table of Contents
 // THEN I am taken to the corresponding section of the README

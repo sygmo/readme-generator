@@ -4,7 +4,7 @@ function renderLicenseBadge(license) {
   switch (license) {
     case "Apache":
       return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
-    case "GPL":
+    case "GNU General Public License (GPL)":
       return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
     case "MIT":
       return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
@@ -21,7 +21,7 @@ function renderLicenseLink(license) {
   switch (license) {
     case "Apache":
       return "https://opensource.org/licenses/Apache-2.0";
-    case "GPL":
+    case "GNU General Public License (GPL)":
       return "https://www.gnu.org/licenses/gpl-3.0";
     case "MIT":
       return "https://opensource.org/licenses/MIT";
@@ -38,7 +38,7 @@ function renderLicenseSection(license) {
   switch (license) {
     case "Apache":
       return `[Apache License 2.0](${renderLicenseLink(license)})`;
-    case "GPL":
+    case "GNU General Public License (GPL)":
       return `[GNU General Public License (GPL)](${renderLicenseLink(license)})`;
     case "MIT":
       return `[MIT License](${renderLicenseLink(license)})`;
@@ -58,25 +58,37 @@ function generateMarkdown(data) {
   ${data.description}
   
   ## Table of Contents
-  
+  [Installation](#installation)
+  [Usage](#usage)
+  [Contributing](#contributing)
+  [Tests](#tests)
+  [Questions](#questions)
+  [License](#license)
+
+  <a name="installation"/></a>
   ## Installation
   Run the following command:
   ~~~
   ${data.installation}
   ~~~
 
+  <a name="usage"/></a>
   ## Usage
   ${data.usage}
   
+  <a name="contributing"/></a>
   ## Contributing
   ${data.contribution}
   
+  <a name="tests"/></a>
   ## Tests
   ${data.test}
   
+  <a name="questions"/></a>
   ## Questions
   Please contact me with any questions at ${data.email}.
   
+  <a name="license"></a>
   ## License
   ${renderLicenseSection(data.license)}
 `;
