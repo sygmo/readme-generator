@@ -58,19 +58,16 @@ function generateMarkdown(data) {
   ${data.description}
   
   ## Table of Contents
-  [Installation](#installation)
-  [Usage](#usage)
-  [Contributing](#contributing)
-  [Tests](#tests)
-  [Questions](#questions)
-  [License](#license)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  - [License](#license)
 
   <a name="installation"/></a>
   ## Installation
-  Run the following command:
-  ~~~
   ${data.installation}
-  ~~~
 
   <a name="usage"/></a>
   ## Usage
@@ -86,7 +83,7 @@ function generateMarkdown(data) {
   
   <a name="questions"/></a>
   ## Questions
-  Please contact me with any questions at ${data.email}.
+  Please contact me with any questions at ${data.email} or find me on [Github](https://github.com/${data.github}).
   
   <a name="license"></a>
   ## License
